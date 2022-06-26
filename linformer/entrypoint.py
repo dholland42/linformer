@@ -40,7 +40,11 @@ def run_experiment(
     print(
         f"SEQUENCE LENGTH: {sequence_length}\n"
         f"BATCH SIZE:      {batch_size}\n"
-        f"INFERENCE TIME:  {t1 - t0}"
+        f"EMBEDDING DIM:   {embedding_dim}\n"
+        f"PROJECTION DIM:  {projection_dim}\n"
+        f"NUM HEADS:       {num_heads}\n"
+        f"HIDDEN DIM:      {hidden_dim}\n"
+        f"TIME:            {t1 - t0:.3f} seconds"
     )
 
 

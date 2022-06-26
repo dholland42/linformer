@@ -30,8 +30,34 @@ Total params: 1,205,504
 Trainable params: 1,205,504
 Non-trainable params: 0
 __________________________________________________________________________________________________
-1/1 [==============================] - 1s 752ms/step
+1/1 [==============================] - 1s 738ms/step
 SEQUENCE LENGTH: 2000
 BATCH SIZE:      25
-INFERENCE TIME:  0.7883796691894531
+EMBEDDING DIM:   256
+PROJECTION DIM:  64
+NUM HEADS:       8
+HIDDEN DIM:      128
+TIME:            0.775 seconds
+```
+
+Different configurations can be played around with via the `entrypoint`.
+
+```
+Usage: entrypoint [OPTIONS]
+
+  Run a prediction time experiment.
+
+Options:
+  --sequence-length INTEGER       [default: 2000]
+  --batch-size INTEGER            [default: 25]
+  --embedding-dim INTEGER         [default: 256]
+  --projection-dim INTEGER        [default: 64]
+  --num-heads INTEGER             [default: 8]
+  --hidden-dim INTEGER            [default: 128]
+  --install-completion [bash|zsh|fish|powershell|pwsh]
+                                  Install completion for the specified shell.
+  --show-completion [bash|zsh|fish|powershell|pwsh]
+                                  Show completion for the specified shell, to
+                                  copy it or customize the installation.
+  --help                          Show this message and exit.
 ```
