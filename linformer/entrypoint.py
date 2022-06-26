@@ -40,7 +40,7 @@ def run_experiment(
     print(
         f"SEQUENCE LENGTH: {sequence_length}\n"
         f"BATCH SIZE:      {batch_size}\n"
-        f"TIME:            {t1 - t0}"
+        f"INFERENCE TIME:  {t1 - t0}"
     )
 
 

@@ -373,11 +373,15 @@ class LinearMultiHeadAttention(Layer):
           **common_kwargs)
       self._kt = einsum_dense.EinsumDense(
         'bsnh,se->benh',
-        output_shape=(32, None, None)
+        output_shape=(32, None, None),
+        name="key_transform",
+        **common_kwargs
       ) if self._proj_dim else tf.identity
       self._vt = einsum_dense.EinsumDense(
         'bsnh,sf->bfnh',
-        output_shape=(32, None, None)
+        output_shape=(32, None, None),
+        name="value_transform",
+        **common_kwargs
       ) if self._proj_dim else tf.identity
       # Builds the attention computations for multi-head dot product attention.
       # These computations could be wrapped into the keras attention layer once
