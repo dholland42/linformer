@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "linformer"
+version = "0.1.0"
+description = "Your description here."
+authors = ["Daniel Holland <danielholland414@gmail.com>"]
+license = "BSD3"
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+tensorflow = "^2.9.1"
+keras = "^2.9.0"
+keras-nlp = "^0.2.0"
+tensorflow-io = "^0.26.0"
+typer = "^0.4.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+flake8 = "^3.9.0"
+mypy = "^0.910"
+ipykernel = "^6.15.0"
+
+[tool.poetry.scripts]
+entrypoint = "linformer.entrypoint:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
