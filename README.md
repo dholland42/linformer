@@ -5,8 +5,9 @@ This is a test implementation of the linear attention as described in the
 the current [`MultiHeadAttention` layer](https://www.tensorflow.org/api_docs/python/tf/keras/layers/MultiHeadAttention)
 implementation and make the smallest change possible to get it working.
 
-The basig gist is the change made [here](https://github.com/dholland42/linformer/blob/main/linformer/attention.py#L523-L527)
-where we project the sequence dimension of the key and value arrays to avoid the
+The basic idea is that we set up [2 additional projections](https://github.com/dholland42/linformer/blob/main/linformer/attention.py#L374-L385)
+that will transform the sequence dimension in the key and value array. Then we perform the projection
+[here](https://github.com/dholland42/linformer/blob/main/linformer/attention.py#L523-L527) to avoid the
 `O(sequence_length^2)` operation in the attention computation.
 
 Random thought process can be found in [this notebook](./understanding.ipynb).
